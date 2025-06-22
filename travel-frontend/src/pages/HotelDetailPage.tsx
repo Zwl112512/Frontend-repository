@@ -10,6 +10,8 @@ interface Hotel {
   starRating?: number;
   pricePerNight: number;
   imageUrl?: string;
+  averageRating?: number;
+  numReviews?: number;   
 }
 interface Review {
   _id: string;
@@ -112,7 +114,10 @@ export default function HotelDetailPage() {
           <h1 className="cyber-title">{hotel.name}</h1>
           <p className="cyber-highlight">{hotel.location}</p>
           <p>⭐ {hotel.starRating || '-'} stars</p>
-          <p>💴 HKD {hotel.pricePerNight} / night</p>
+          {hotel.averageRating !== undefined && (
+          <p>⭐ Average Rating: {hotel.averageRating.toFixed(1)} / 5 ({hotel.numReviews || 0} reviews)</p>
+          )}
+<p>💴 HKD {hotel.pricePerNight} / night</p>
           <button onClick={handleFavorite} className="cyber-button mt-3">
             {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
           </button>

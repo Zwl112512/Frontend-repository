@@ -17,9 +17,9 @@ const LoginPage = () => {
       localStorage.setItem('token', token);
       localStorage.setItem('userId', user._id);
       localStorage.setItem('username', user.username);
-      localStorage.setItem('role', user.role); // 儲存角色
+      localStorage.setItem('role', user.role); 
 
-      // 根據角色導向不同頁面
+ 
       if (user.role === 'admin') {
         navigate('/admin/dashboard');
       } else {
@@ -34,7 +34,7 @@ const LoginPage = () => {
     <div className="cyber-container">
       <div className="min-h-screen flex items-center justify-center">
         <form onSubmit={handleLogin} className="cyber-form">
-          <h2 className="cyber-title">登入 Login</h2>
+          <h2 className="cyber-title">Login</h2>
           {error && <p className="text-red-500 mb-4">{error}</p>}
           <input
             type="text"
@@ -51,10 +51,10 @@ const LoginPage = () => {
             className="cyber-input"
           />
           <button type="submit" className="cyber-button mt-4 w-full">
-            登入
+            login
           </button>
           <p className="mt-4 text-center text-white">
-            還沒有帳號？ <Link to="/register" className="cyber-link">註冊</Link>
+            No account ? <Link to="/register" className="cyber-link">Register</Link>
           </p>
         </form>
       </div>
