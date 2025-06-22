@@ -1,0 +1,67 @@
+.booking-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #ffffff;
+}
+
+.booking-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #22d3ee; /* cyan-400 */
+  border-bottom: 1px solid #0891b2;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.booking-card {
+  background-color: #1e293b;
+  border: 1px solid #0891b2;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.1);
+  margin-bottom: 16px;
+}
+
+.booking-hotel-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #67e8f9;
+  cursor: pointer;
+}
+
+.booking-hotel-name:hover {
+  text-decoration: underline;
+}
+
+.booking-hotel-location {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.booking-info {
+  font-size: 0.875rem;
+  margin: 2px 0;
+}
+
+.booking-created {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.booking-delete {
+  color: #f87171;
+  font-size: 0.875rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: color 0.2s;
+}
+
+.booking-delete:hover {
+  color: #fecaca;
+}

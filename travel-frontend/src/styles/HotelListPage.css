@@ -1,0 +1,105 @@
+body {
+  background-color: #0d0d0d;
+  color: #00f0ff;
+  font-family: 'Orbitron', 'Share Tech Mono', monospace;
+}
+
+.hotel-list-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.cyber-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #00f0ff;
+  text-shadow: 0 0 5px #00f0ff, 0 0 15px #0088ff;
+}
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.hotel-card {
+  background: rgba(20, 20, 20, 0.85);
+  border: 2px solid #00f0ff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 10px #00f0ff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hotel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #00f0ff;
+}
+
+.hotel-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.hotel-name {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.hotel-info {
+  font-size: 0.95rem;
+  color: #99dfff;
+  margin: 0.25rem 0;
+}
+
+.hotel-price {
+  font-weight: bold;
+  color: #ff00ff;
+  margin: 0.75rem 0;
+}
+
+.cyber-button {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  color: #00f0ff;
+  background: transparent;
+  border: 2px solid #00f0ff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cyber-button:hover {
+  background: #00f0ff;
+  color: #0d0d0d;
+}
+
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.page-button {
+  margin: 0 0.5rem;
+  font-weight: bold;
+}
+
+.page-button.active {
+  background-color: #00f0ff;
+  color: #0d0d0d;
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+.page-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  border-color: #444;
+  color: #666;
+}

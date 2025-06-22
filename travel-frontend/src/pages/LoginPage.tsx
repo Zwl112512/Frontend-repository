@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import api from '../services/api';
 
 const LoginPage = () => {
@@ -12,42 +12,52 @@ const LoginPage = () => {
     e.preventDefault();
     try {
       const res = await api.post('/auth/login', { username, password });
-      const token = res.data.token;
+      const { token, user } = res.data;
+
       localStorage.setItem('token', token);
-      navigate('/hotels');
+      localStorage.setItem('userId', user._id);
+      localStorage.setItem('username', user.username);
+      localStorage.setItem('role', user.role); // 儲存角色
+
+      // 根據角色導向不同頁面
+      if (user.role === 'admin') {
+        navigate('/admin/dashboard');
+      } else {
+        navigate('/hotels');
+      }
     } catch (err: any) {
       setError(err.response?.data?.message || 'Login failed');
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <form onSubmit={handleLogin} className="bg-white p-8 rounded shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">登入 Login</h2>
-        {error && <p className="text-red-500 mb-4">{error}</p>}
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded mb-4"
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded mb-6"
-          required
-        />
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
-        >
-          登入
-        </button>
-      </form>
+    <div className="cyber-container">
+      <div className="min-h-screen flex items-center justify-center">
+        <form onSubmit={handleLogin} className="cyber-form">
+          <h2 className="cyber-title">登入 Login</h2>
+          {error && <p className="text-red-500 mb-4">{error}</p>}
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            className="cyber-input"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="cyber-input"
+          />
+          <button type="submit" className="cyber-button mt-4 w-full">
+            登入
+          </button>
+          <p className="mt-4 text-center text-white">
+            還沒有帳號？ <Link to="/register" className="cyber-link">註冊</Link>
+          </p>
+        </form>
+      </div>
     </div>
   );
 };

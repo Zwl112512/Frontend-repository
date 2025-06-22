@@ -1,0 +1,147 @@
+/* AdminUserList.css */
+
+.admin-container {
+  padding: 2rem;
+  background-color: #0b1020;
+  min-height: 100vh;
+  color: white;
+}
+
+.admin-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00f0ff;
+  margin-bottom: 1.5rem;
+}
+
+.admin-search {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #00f0ff;
+  border-radius: 6px;
+  background-color: #0b1020;
+  color: white;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #00f0ff;
+  margin-top: 1rem;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid #00f0ff;
+  min-width: 120px;
+}
+
+.admin-table th {
+  background-color: #121933;
+  color: #00f0ff;
+  font-weight: bold;
+}
+
+.admin-table tr:hover {
+  background-color: #1e294b;
+}
+
+.admin-select {
+  background-color: #121933;
+  color: white;
+  border: 1px solid #00f0ff;
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+}
+
+.admin-status-active {
+  color: #00ff66;
+  font-weight: bold;
+}
+
+.admin-status-banned {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+.admin-action-btn {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.admin-action-delete {
+  color: #ff4d4d;
+}
+
+.admin-action-ban {
+  color: #00ccff;
+}
+
+.admin-pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.admin-page-btn {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid #00f0ff;
+  color: #00f0ff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.admin-page-btn:hover:not(:disabled) {
+  background-color: #00f0ff;
+  color: #0b1020;
+}
+
+
+.admin-action-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-action-btn {
+  padding: 4px 10px;
+  border: 1px solid cyan;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  background-color: transparent;
+  transition: 0.2s ease;
+}
+
+.admin-action-delete {
+  color: #ff4d4d;
+}
+
+.admin-action-ban {
+  color: #00bfff;
+}
+
+.admin-action-delete:hover,
+.admin-action-ban:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+  transform: scale(1.05);
+}

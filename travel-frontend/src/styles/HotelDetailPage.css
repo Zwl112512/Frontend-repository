@@ -1,0 +1,152 @@
+/* src/styles/HotelDetailPage.css */
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0b0c2a;
+  color: #f0f0f0;
+  min-height: 100vh;
+}
+
+.cyber-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px 80px; 
+  background: linear-gradient(to bottom, #0b0c2a, #1a1b3a);
+  border-radius: 12px;
+  box-shadow: 0 0 12px #00f0ff;
+  min-height: 100vh; 
+}
+
+.cyber-button {
+  background-color: #00ffff;
+  color: #0f0f1a;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 0 8px #00ffff;
+  transition: 0.2s;
+}
+
+.cyber-button:hover {
+  background-color: #00dddd;
+  box-shadow: 0 0 12px #00ffff;
+}
+
+.cyber-input,
+.cyber-select,
+.cyber-textarea {
+  background-color: #1f1f2f;
+  border: 1px solid #555;
+  padding: 8px;
+  border-radius: 4px;
+  color: #fff;
+  width: 100%;
+}
+
+.cyber-review {
+  background-color: #2d2d3a;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px #444;
+}
+
+.cyber-heading {
+  color: #00ffff;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.cyber-highlight {
+  color: #ff00ff;
+}
+
+.cyber-link {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+.hotel-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.hotel-header-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.hotel-image {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #00f0ff99;
+  object-fit: cover;
+}
+
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.left-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.right-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hotel-preview {
+  max-width: 100%;
+  max-height: 280px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px cyan;
+}
+
+.cyber-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #00f0ff;
+  text-shadow: 0 0 6px #00f0ff, 0 0 20px #00cfff;
+}
+
+.cyber-subtitle {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 6px #00f0ff;
+  color: #00ffff;
+}
+
+.booking-form,
+.review-section {
+  background-color: #141428;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px #00f0ff44;
+}
+
+.profile-avatar-preview {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 9999px;
+  box-shadow: 0 0 10px cyan;
+  border: 2px solid cyan;
+}
+

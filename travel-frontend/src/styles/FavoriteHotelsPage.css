@@ -1,0 +1,81 @@
+.cyber-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: white;
+}
+
+.cyber-heading {
+  font-size: 1.75rem;
+  font-weight: bold;
+  border-bottom: 2px solid #0ff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #67e8f9;
+}
+
+.favorite-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.favorite-card {
+  background-color: #1e293b;
+  border: 1px solid #0891b2;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  padding: 1rem;
+  box-shadow: 0 0 12px #0ea5e9;
+  transition: 0.3s;
+}
+
+.favorite-card:hover {
+  box-shadow: 0 0 20px #67e8f9;
+}
+
+.favorite-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.favorite-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #67e8f9;
+  cursor: pointer;
+  transition: text-decoration 0.2s;
+}
+
+.favorite-name:hover {
+  text-decoration: underline;
+}
+
+.favorite-location {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.favorite-price {
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.favorite-stars {
+  margin-top: 0.25rem;
+  color: #fbbf24;
+}
+
+.favorite-remove {
+  margin-top: 0.5rem;
+  color: #f87171;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.favorite-remove:hover {
+  color: #fca5a5;
+}

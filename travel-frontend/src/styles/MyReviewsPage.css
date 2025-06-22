@@ -1,0 +1,139 @@
+.cyber-container {
+  padding: 1.5rem;
+  background-color: #0d0d2b;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cyber-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00f0ff;
+  margin-bottom: 1rem;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.review-item {
+  background: #111b30;
+  border: 1px solid #00f0ff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 10px #00f0ff33;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hotel-link {
+  font-weight: 600;
+  color: #00ccff;
+  cursor: pointer;
+}
+
+.hotel-link:hover {
+  text-decoration: underline;
+}
+
+.rating {
+  color: #ffd700;
+  margin-top: 0.5rem;
+}
+
+.comment {
+  color: #cfcfcf;
+  margin-top: 0.25rem;
+}
+
+.review-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.edit-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  text-align: right;
+}
+
+.edit-btn {
+  color: #00aaff;
+}
+
+.edit-btn:hover {
+  text-decoration: underline;
+}
+
+.delete-btn {
+  color: #ff4d4d;
+}
+
+.delete-btn:hover {
+  text-decoration: underline;
+}
+
+.empty-state {
+  color: #888;
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.loading-text {
+  color: #00f0ff;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error-text {
+  color: #ff4d4d;
+  text-align: center;
+  font-weight: bold;
+}
+
+.edit-btn,
+.delete-btn {
+  transition: color 0.2s ease-in-out;
+}
+
+
+@media (max-width: 600px) {
+  .review-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #00f0ff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 1rem auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

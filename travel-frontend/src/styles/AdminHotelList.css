@@ -1,0 +1,204 @@
+.admin-hotel-container {
+  padding: 1.5rem;
+  background-color: #0d1021;
+  color: #e0e0e0;
+}
+
+.admin-hotel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.admin-hotel-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #00e1ff;
+}
+
+.admin-hotel-add-btn {
+  background-color: #00e1ff;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.admin-hotel-search {
+  width: 100%;
+  max-width: 20rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #00e1ff;
+  border-radius: 0.5rem;
+  background-color: #13162b;
+  color: #fff;
+}
+
+.admin-hotel-msg {
+  color: #ccc;
+}
+
+.admin-hotel-error {
+  color: #f87171;
+}
+
+.admin-hotel-table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-hotel-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #00e1ff;
+}
+
+.admin-hotel-table th,
+.admin-hotel-table td {
+  padding: 0.5rem;
+  border: 1px solid #00e1ff;
+  text-align: center;
+}
+
+.admin-hotel-table thead {
+  background-color: #121933;
+  color: #00e1ff;
+}
+
+.hotel-img {
+  height: 3rem;
+  width: 4rem;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  border: 1px solid #333;
+}
+
+.action-btn {
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.action-btn.edit {
+  color: #00e1ff;
+}
+
+.action-btn.edit:hover {
+  text-decoration: underline;
+}
+
+.action-btn.delete {
+  color: #ff4d4f;
+}
+
+.action-btn.delete:hover {
+  text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background-color: #1a1f37;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 32rem;
+  box-shadow: 0 0 10px #00e1ff33;
+}
+
+.modal-content h2 {
+  color: #00e1ff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.modal-content input[type='text'],
+.modal-content input[type='number'],
+.modal-content input[type='file'] {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid #555;
+  background-color: #13162b;
+  color: #fff;
+}
+
+.modal-preview {
+  height: 6rem;
+  border-radius: 0.375rem;
+  margin-top: 0.5rem;
+  object-fit: cover;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.modal-actions button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-actions button:first-child {
+  background-color: transparent;
+  border: 1px solid #888;
+  color: #fff;
+}
+
+.modal-actions button:last-child {
+  background-color: #00e1ff;
+  color: #000;
+  border: none;
+}
+
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.modal-field label {
+  color: #00e0ff;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.modal-field input {
+  background-color: #131933;
+  border: 1px solid #444;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.modal-preview {
+  margin-top: 0.5rem;
+  height: 90px;
+  border-radius: 0.375rem;
+  object-fit: cover;
+}

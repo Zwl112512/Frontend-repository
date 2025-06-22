@@ -1,0 +1,117 @@
+/* src/styles/UserMenu.css */
+
+.user-menu-container {
+  pointer-events: auto;
+  position: relative;
+  display: inline-block;
+}
+
+
+.user-menu-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  border-radius: 9999px;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 5px #00ffff88;
+}
+
+.user-avatar-fallback {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background-color: #00ffff;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-name-label {
+  font-size: 0.875rem;
+  color: #00e0ff;
+  font-weight: bold;
+}
+
+/* Dropdown Menu */
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background-color: rgba(17, 24, 42, 0.9);
+  border: 1px solid #00ffff55;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 12px #00ffff33;
+  min-width: 10rem;
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+  text-align: right;
+}
+
+.user-dropdown-item {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: white;
+  text-align: right;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.user-dropdown-item:hover {
+  background-color: #00ffff22;
+}
+
+.user-dropdown-item.logout {
+  color: #ff4d4f;
+}
+
+.user-dropdown-item.logout:hover {
+  background-color: #ff4d4f33;
+}
+
+.user-dropdown-divider {
+  border-top: 1px solid #00ffff44;
+  margin: 0.25rem 0;
+}
+
+/* 下拉菜单本体 */
+.user-menu-dropdown {
+  position: absolute;
+  top: 110%; /* 稍微下移 */
+  right: 0;
+  background-color: #0e1a2b;
+  border: 1px solid #00ffff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #00ffff88;
+  padding: 8px 0;
+  z-index: 9999;
+  color: white;
+  width: 160px;
+}
+
+.user-menu-wrapper {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%; /* 加上这个 */
+  pointer-events: none; /* 避免点击干扰 */
+}
